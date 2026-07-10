@@ -36,7 +36,7 @@ const Manager = () => {
         if (form.site.length > 3 && form.username.length > 3 && form.password.length > 3) {
             try {
                 // Send to backend
-                const res = await fetch("http://localhost:3000/", {
+                const res = await fetch("https://password-manager-backend-8tgs.onrender.com/", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(form),

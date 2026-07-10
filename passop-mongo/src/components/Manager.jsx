@@ -15,7 +15,7 @@ const  Manager = () => {
    const getPasswords = async() => {
     console.log("Fetching backend...");
 
-     let req = await fetch("http://localhost:3000/")
+     let req = await fetch("https://password-manager-backend-8tgs.onrender.com/")
      let passwords = await req.json()
             console.log(passwords)
             setPasswordArray(passwords)
@@ -44,10 +44,10 @@ const  Manager = () => {
          if(form.site.length>3 && form.site.username>3 && form.site.password>3){
 
         //if any such id exists in db, delete it
-         await fetch("http://localhost:3000/",{ method: "DELETE", headers: {"Content-Type":"application/json"},body: JSON.stringify({id: form.id})})
+         await fetch("https://password-manager-backend-8tgs.onrender.com/",{ method: "DELETE", headers: {"Content-Type":"application/json"},body: JSON.stringify({id: form.id})})
       
         setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
-        await fetch("http://localhost:3000/",{ method: "POST", headers: {"Content-Type":"application/json"},body: JSON.stringify({...form, id: uuidv4()})})
+        await fetch("https://password-manager-backend-8tgs.onrender.com/",{ method: "POST", headers: {"Content-Type":"application/json"},body: JSON.stringify({...form, id: uuidv4()})})
         //localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]))
         //console.log([...passwordArray, form])
         setform({ site: "", username: "", password: "" })
@@ -72,7 +72,7 @@ const  Manager = () => {
         if(c){
              setPasswordArray(passwordArray.filter(item=>item.id!=id))
        // localStorage.setItem("passwords", JSON.stringify(passwordArray.filter(item=>item.id!=id)))
-         let res = await fetch("http://localhost:3000/",{ method: "DELETE", headers: {"Content-Type":"application/json"},body: JSON.stringify({id})})
+        let res = await fetch("https://password-manager-backend-8tgs.onrender.com/",{ method: "DELETE", headers: {"Content-Type":"application/json"},body: JSON.stringify({id})})
       
         toast('Password Deleted!',{
             position: "top-right",
