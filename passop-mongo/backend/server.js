@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());         // ✅ ONLY ONCE, AFTER app
 
-const url = 'mongodb://localhost:27017';
+const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
 const dbName = 'passop';
 
