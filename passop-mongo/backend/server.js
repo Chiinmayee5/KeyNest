@@ -13,13 +13,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());  
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
   res.json({
     success: true,
     message: "🚀 Welcome to KeyNest API",
     status: "Running"
   });
-});      
+}); 
 app.use("/auth", authRoutes);
 
 const url = process.env.MONGODB_URI;
