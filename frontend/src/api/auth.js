@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/auth";
+const API_URL = "https://keynest-api-f4w5.onrender.com/auth";
 
 // Register User
 export const registerUser = async (userData) => {
