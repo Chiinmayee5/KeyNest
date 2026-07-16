@@ -34,7 +34,7 @@ const fetchPasswords = async () => {
 
         console.log("Token:", token);
 
-        const res = await fetch("http://localhost:3000/", {
+        const res = await fetch("https://keynest-api-f4w5.onrender.com/", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const method = form.id ? "PUT" : "POST";
 console.log("Method:", method);
 console.log("Form id:", form.id);
 
-const res = await fetch("http://localhost:3000/", {
+const res = await fetch("https://keynest-api-f4w5.onrender.com/", {
     method,
     headers: {
         "Content-Type": "application/json",
@@ -133,7 +133,7 @@ console.log("Backend response:", data);
     try {
         const token = localStorage.getItem("token");
 
-        await fetch("http://localhost:3000/", {
+        await fetch("https://keynest-api-f4w5.onrender.com/", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

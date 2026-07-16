@@ -4,20 +4,20 @@ const Navbar = () => {
       <div className="flex justify-around items-center px-4 py-5 h-14">
         {/* Logo */}
         <div className="logo font-bold text-2xl flex items-center gap-1">
-          <span className="text-green-400">&lt;</span>
+          <span className="text-teal-400">&lt;</span>
           <span>PassOP</span>
-          <span className="text-green-400">/&gt;</span>
+          <span className="text-teal-400">/&gt;</span>
         </div>
 
         {/* Navigation Links */}
         <ul className="flex gap-4">
-          <li className="hover:text-green-400 cursor-pointer">Home</li>
-          <li className="hover:text-green-400 cursor-pointer">About</li>
-          <li className="hover:text-green-400 cursor-pointer">Contact</li>
+          <li className="hover:text-teal-400 cursor-pointer">Home</li>
+          <li className="hover:text-teal-400 cursor-pointer">About</li>
+          <li className="hover:text-teal-400 cursor-pointer">Contact</li>
         </ul>
 
         {/* Github Button */}
-        <button className="flex items-center gap-2 bg-green-500 px-3 py-1 rounded-md hover:bg-green-600 transition-colors ring-white ring-1">
+        <button className="flex items-center gap-2 bg-teal-500 px-3 py-1 rounded-md hover:bg-teal-600 transition-colors ring-white ring-1">
           <img
             src="/icons/github.png"
             alt="github"
