@@ -12,7 +12,14 @@ const app = express();
  app.use(cors())
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());         // ✅ ONLY ONCE, AFTER app
+app.use(bodyParser.json());  
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "🚀 Welcome to KeyNest API",
+    status: "Running"
+  });
+});      
 app.use("/auth", authRoutes);
 
 const url = process.env.MONGODB_URI;
